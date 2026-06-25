@@ -1,0 +1,10 @@
+---
+title: "Tactical Analysis & Game Understanding"
+listing:
+  contents: "*/index.qmd"
+  type: default
+  sort: "date desc"
+  fields: [date, title, description]
+---
+
+Opposition reports and match analysis.

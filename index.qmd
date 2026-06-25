@@ -1,0 +1,31 @@
+---
+title: "Rayan [Surname]"
+subtitle: "Football Performance Analyst & Scout"
+about:
+  template: jolla
+  image: profile.jpg
+  image-shape: rounded
+  links:
+    - text: View CV
+      href: cv.pdf
+    - text: Football Analytics
+      href: football-analytics.qmd
+    - icon: github
+      text: GitHub
+      href: https://github.com/HalfSpacePrince
+---
+
+## Current Focus
+
+I focus on work that turns complex football questions into practical
+decision-support tools: scouting, recruitment, and performance analysis.
+My approach combines qualitative video analysis with quantitative data
+work, letting Sportscode observations lead the analysis while data serves
+as supporting evidence.
+
+## Highlights
+
+- Six-month football analytics program benchmarking **Brøndby IF** (Danish Superliga)
+- Built a full **SofaScore + Sportscode data pipeline** for opposition and player analysis
+- **Four-corner scout dossiers** combining percentile charts, heatmaps, shot maps and pass maps
+- Video scouting reports produced in DaVinci Resolve with tactical animation in TacticalPad

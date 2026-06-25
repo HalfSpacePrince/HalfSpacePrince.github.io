@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Rayan"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: tactical-analysis/index.qmd
+        text: Tactical Analysis
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/HalfSpacePrince
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/your-linkedin-handle
+        aria-label: LinkedIn
+  search: true
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+execute:
+  freeze: auto

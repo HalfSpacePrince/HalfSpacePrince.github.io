@@ -1,0 +1,32 @@
+---
+title: "Barnsley Opposition Analysis"
+description: "Tactical breakdown of Barnsley's build-up, pressing structure, and set-piece patterns."
+date: 2026-05-20
+categories: [opposition analysis]
+---
+
+A pre-match opposition report on Barnsley, covering formation tendencies, selection patterns, recent form, and tactical structure under Conor Hourihane.
+
+## Executive Summary
+
+![](images/executive-summary.png){.column-screen-inset}
+
+## Recent Form
+
+![](images/recent-form.png){.column-screen-inset}
+
+## Predicted XI
+
+![](images/predicted-xi.png){.column-screen-inset}
+
+## Rotation & Alternatives
+
+![](images/rotation-alternatives.png){.column-screen-inset}
+
+## Formation & Shape
+
+![](images/formation-shape.png){.column-screen-inset}
+
+## Methodology & Scope
+
+![](images/methodology.png){.column-screen-inset}
