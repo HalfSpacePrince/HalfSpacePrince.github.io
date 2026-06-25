@@ -19,24 +19,24 @@ The slides below are the opening section of a complete 28-page opposition report
 
 ## Executive Summary
 
-![](images/executive-summary.png){.column-screen-inset}
+![](images/executive-summary.png){.column-page}
 
 ## Recent Form
 
-![](images/recent-form.png){.column-screen-inset}
+![](images/recent-form.png){.column-page}
 
 ## Predicted XI
 
-![](images/predicted-xi.png){.column-screen-inset}
+![](images/predicted-xi.png){.column-page}
 
 ## Rotation & Alternatives
 
-![](images/rotation-alternatives.png){.column-screen-inset}
+![](images/rotation-alternatives.png){.column-page}
 
 ## Formation & Shape
 
-![](images/formation-shape.png){.column-screen-inset}
+![](images/formation-shape.png){.column-page}
 
 ## Methodology & Scope
 
-![](images/methodology.png){.column-screen-inset}
+![](images/methodology.png){.column-page}
