@@ -7,6 +7,16 @@ categories: [opposition analysis]
 
 A pre-match opposition report on Barnsley, covering formation tendencies, selection patterns, recent form, and tactical structure under Conor Hourihane.
 
+## The Full Analysis
+
+The slides below are the opening section of a complete 28-page opposition report.
+
+[Read the full report (PDF) →](Barnsley_Opposition_Report.pdf){target="_blank"}
+
+**Telestrated clips presentation** — a slide deck with annotated video clips accompanies the report. The file is large, so downloading is recommended for the best viewing experience.
+
+[Download the clips presentation (PowerPoint) →](https://docs.google.com/presentation/d/1c7Ovr96wX2VHdEKpOk2Snn9z7VZZ-lNH/export/pptx){target="_blank"}
+
 ## Executive Summary
 
 ![](images/executive-summary.png){.column-screen-inset}
