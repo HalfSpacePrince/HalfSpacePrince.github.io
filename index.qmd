@@ -1,15 +1,15 @@
 ---
-title: "Rayan [Surname]"
+title: "Rayan Osman"
 subtitle: "Football Performance Analyst & Scout"
 about:
-  template: jolla
+  template: trestles
   image: profile.jpg
   image-shape: rounded
   links:
     - text: View CV
       href: cv.pdf
     - text: Football Analytics
-      href: football-analytics.qmd
+      href: tactical-analysis/index.qmd
     - icon: github
       text: GitHub
       href: https://github.com/HalfSpacePrince

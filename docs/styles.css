@@ -1,1 +1,213 @@
-/* css styles */
+/* ==========================================================================
+   Rayan Osman — Football Analytics Portfolio
+   Palette:  green #1D9E75 (accent) · grey #888888 (neutral) · red #E24B4A (alert)
+   Fonts:    Inter (body) · JetBrains Mono (mono)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --rp-green:      #1D9E75;
+  --rp-green-dark: #17805e;   /* darker green for hover / active states */
+  --rp-grey:       #888888;
+  --rp-grey-light: #e6e6e6;
+  --rp-red:        #E24B4A;
+  --rp-ink:        #24292e;    /* near-black body text, softer than pure #000 */
+
+  /* Map Bootstrap/Quarto theme variables onto the palette */
+  --bs-primary:      var(--rp-green);
+  --bs-primary-rgb:  29, 158, 117;
+  --bs-link-color:              var(--rp-green);
+  --bs-link-hover-color:        var(--rp-green-dark);
+  --bs-secondary:    var(--rp-grey);
+  --bs-body-font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --bs-font-monospace:   'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* ---- Base typography --------------------------------------------------- */
+
+body {
+  font-family: var(--bs-body-font-family);
+  color: var(--rp-ink);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+code, pre, kbd, .sourceCode {
+  font-family: var(--bs-font-monospace);
+}
+
+/* Headings — tight, confident, restrained */
+h1, h2, h3, h4, h5, h6,
+.quarto-title h1.title {
+  font-family: var(--bs-body-font-family);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--rp-ink);
+  line-height: 1.25;
+}
+
+/* Subtle grey accent rule under section headings */
+h2 {
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--rp-grey-light);
+}
+
+.quarto-title .subtitle {
+  color: var(--rp-grey);
+  font-weight: 500;
+}
+
+/* ---- Links ------------------------------------------------------------- */
+
+a {
+  color: var(--rp-green);
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--rp-green-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---- Navbar ------------------------------------------------------------ */
+
+.navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid var(--rp-grey-light);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.navbar .navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--rp-ink) !important;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: var(--rp-grey) !important;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+  color: var(--rp-ink) !important;
+}
+
+.navbar .navbar-nav .nav-link.active {
+  color: var(--rp-green) !important;
+  border-bottom-color: var(--rp-green);
+}
+
+/* Search + icon links */
+.navbar .aa-DetachedSearchButtonIcon,
+.navbar .bi {
+  color: var(--rp-grey);
+}
+.navbar a:hover .bi {
+  color: var(--rp-green);
+}
+
+/* ---- Buttons (index "about" links render as buttons) ------------------- */
+
+.btn-primary,
+.about-links .btn {
+  --bs-btn-bg: var(--rp-green);
+  --bs-btn-border-color: var(--rp-green);
+  --bs-btn-hover-bg: var(--rp-green-dark);
+  --bs-btn-hover-border-color: var(--rp-green-dark);
+  --bs-btn-active-bg: var(--rp-green-dark);
+  --bs-btn-active-border-color: var(--rp-green-dark);
+  font-weight: 500;
+}
+
+/* ---- Listing cards (section pages e.g. Tactical Analysis) -------------- */
+
+.quarto-listing .card,
+.quarto-post {
+  border: 1px solid var(--rp-grey-light);
+  border-radius: 8px;
+  transition: box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+}
+
+.quarto-listing .card:hover,
+.quarto-post:hover {
+  border-color: var(--rp-green);
+  box-shadow: 0 6px 20px rgba(29, 158, 117, 0.12);
+  transform: translateY(-2px);
+}
+
+.quarto-listing .card .card-title,
+.quarto-post .listing-title {
+  font-weight: 600;
+  color: var(--rp-ink);
+}
+
+.quarto-listing .card:hover .card-title,
+.quarto-post:hover .listing-title {
+  color: var(--rp-green);
+}
+
+.listing-description {
+  color: var(--rp-grey);
+}
+
+/* Category tags / dates */
+.listing-category,
+.quarto-category {
+  background-color: rgba(29, 158, 117, 0.08);
+  color: var(--rp-green-dark);
+  border: 1px solid rgba(29, 158, 117, 0.25);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.1rem 0.6rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.listing-category:hover {
+  background-color: var(--rp-green);
+  color: #ffffff;
+}
+
+.listing-date {
+  color: var(--rp-grey);
+  font-family: var(--bs-font-monospace);
+  font-size: 0.85rem;
+}
+
+/* ---- Accents: blockquotes, inline code, selection ---------------------- */
+
+blockquote {
+  border-left: 3px solid var(--rp-green);
+  color: var(--rp-grey);
+}
+
+:not(pre) > code {
+  color: var(--rp-red);
+  background-color: rgba(226, 75, 74, 0.07);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+strong {
+  color: var(--rp-ink);
+  font-weight: 600;
+}
+
+::selection {
+  background-color: rgba(29, 158, 117, 0.22);
+}
+
+/* Table of contents active link */
+#TOC a.active,
+.sidebar nav a.active {
+  color: var(--rp-green) !important;
+  border-left-color: var(--rp-green) !important;
+}

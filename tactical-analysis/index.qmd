@@ -2,9 +2,11 @@
 title: "Tactical Analysis & Game Understanding"
 listing:
   contents: "*/index.qmd"
-  type: default
+  type: grid
+  grid-columns: 3
   sort: "date desc"
-  fields: [date, title, description]
+  categories: true
+  fields: [image, title, categories, description]
 ---
 
 Opposition reports and match analysis.
