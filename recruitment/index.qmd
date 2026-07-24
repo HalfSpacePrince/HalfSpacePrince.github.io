@@ -1,0 +1,12 @@
+---
+title: "Recruitment & Talent ID"
+listing:
+  contents: "*/index.qmd"
+  type: grid
+  grid-columns: 3
+  sort: "date desc"
+  categories: true
+  fields: [image, title, categories, description]
+---
+
+Player scouting dossiers and recruitment analysis.

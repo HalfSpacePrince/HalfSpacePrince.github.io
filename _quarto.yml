@@ -10,6 +10,10 @@ website:
         text: Home
       - href: tactical-analysis/index.qmd
         text: Tactical Analysis
+      - href: recruitment/index.qmd
+        text: Recruitment
+      - href: credentials.qmd
+        text: Credentials
       - href: about.qmd
         text: About
     right:
