@@ -133,7 +133,8 @@ a:focus {
   display: inline-block;
   border: 1px solid var(--rp-green);
   border-radius: 6px;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
   color: var(--rp-green) !important;   /* override Bootstrap's link-blue in default state */
   background-color: transparent;
   font-weight: 500;
@@ -149,19 +150,38 @@ a:focus {
   text-decoration: none;
 }
 
+/* First button ("View CV") is solid — filled green with white text */
+.about-links .about-link:first-child {
+  background-color: var(--rp-green);
+  border-color: var(--rp-green);
+  color: #fff !important;
+}
+
+.about-links .about-link:first-child:hover,
+.about-links .about-link:first-child:focus {
+  background-color: var(--rp-green-dark);   /* darken slightly on hover */
+  border-color: var(--rp-green-dark);
+  color: #fff !important;
+}
+
 /* Keep the label span in step with the anchor colour in both states */
 .about-links .about-link .about-link-text {
   color: inherit !important;
 }
 
 /* jolla renders an <hr class="about-sep"> + gap between subtitle and links —
-   hide it and pull the button row up under the subtitle */
+   hide it and pull the button row up close under the subtitle */
 .quarto-about-jolla .about-sep {
   display: none;
+  margin: 0;
 }
 
 .quarto-about-jolla .about-links {
-  margin-top: 0.5rem;
+  margin-top: 1.25rem;   /* ~20px gap under the subtitle */
+}
+
+.quarto-about-jolla .subtitle {
+  margin-bottom: 0;
 }
 
 /* ---- Listing cards (section pages e.g. Tactical Analysis) -------------- */
