@@ -127,19 +127,23 @@ a:focus {
   font-weight: 500;
 }
 
-/* About-block links (jolla template renders <a class="about-link">) —
-   behave like Bootstrap btn-outline-primary in the site green */
+/* About-block links (jolla renders <a class="about-link">). Match the exact
+   metrics stock Quarto/cosmo Bootstrap applies to .btn on the reference site:
+   padding 0.375rem 0.75rem · font-size 1rem · font-weight 400 · line-height 1.5
+   · 1px border · border-radius 0.25rem — keeping the site green instead of blue.
+   The two later links behave as .btn-outline-primary. */
 .about-links .about-link {
   display: inline-block;
   border: 1px solid var(--rp-green);
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
   font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
   color: var(--rp-green) !important;   /* override Bootstrap's link-blue in default state */
   background-color: transparent;
-  font-weight: 500;
   text-decoration: none;
-  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
 .about-links .about-link:hover,
@@ -150,7 +154,7 @@ a:focus {
   text-decoration: none;
 }
 
-/* First button ("View CV") is solid — filled green with white text */
+/* First button ("View CV") is solid — .btn-primary in green */
 .about-links .about-link:first-child {
   background-color: var(--rp-green);
   border-color: var(--rp-green);
@@ -169,8 +173,24 @@ a:focus {
   color: inherit !important;
 }
 
-/* jolla renders an <hr class="about-sep"> + gap between subtitle and links —
-   hide it and pull the button row up close under the subtitle */
+/* The gap under the subtitle is NOT the subtitle margin — it's the empty
+   <main class="content">, the title-block-header bottom margin, and the empty
+   .quarto-title-meta between the header and .about-links. Collapse those, hide
+   the <hr>, then set one controlled ~20px gap on .about-links. */
+.quarto-about-jolla #title-block-header {
+  margin-bottom: 0;
+}
+
+.quarto-about-jolla .quarto-title-meta {
+  margin: 0;
+}
+
+.quarto-about-jolla main.content {
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+}
+
 .quarto-about-jolla .about-sep {
   display: none;
   margin: 0;
@@ -178,10 +198,6 @@ a:focus {
 
 .quarto-about-jolla .about-links {
   margin-top: 1.25rem;   /* ~20px gap under the subtitle */
-}
-
-.quarto-about-jolla .subtitle {
-  margin-bottom: 0;
 }
 
 /* ---- Listing cards (section pages e.g. Tactical Analysis) -------------- */
