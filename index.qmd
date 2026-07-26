@@ -1,6 +1,6 @@
 ---
 title: "Rayan Nasser"
-subtitle: "Football Performance Analyst & Scout"
+subtitle: "Football Performance Analyst"
 about:
   template: jolla
   image: profile.jpg

@@ -127,6 +127,43 @@ a:focus {
   font-weight: 500;
 }
 
+/* About-block links (jolla template renders <a class="about-link">) —
+   behave like Bootstrap btn-outline-primary in the site green */
+.about-links .about-link {
+  display: inline-block;
+  border: 1px solid var(--rp-green);
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  color: var(--rp-green) !important;   /* override Bootstrap's link-blue in default state */
+  background-color: transparent;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.about-links .about-link:hover,
+.about-links .about-link:focus {
+  background-color: var(--rp-green);
+  border-color: var(--rp-green);
+  color: #fff !important;             /* force readable white text over the green fill */
+  text-decoration: none;
+}
+
+/* Keep the label span in step with the anchor colour in both states */
+.about-links .about-link .about-link-text {
+  color: inherit !important;
+}
+
+/* jolla renders an <hr class="about-sep"> + gap between subtitle and links —
+   hide it and pull the button row up under the subtitle */
+.quarto-about-jolla .about-sep {
+  display: none;
+}
+
+.quarto-about-jolla .about-links {
+  margin-top: 0.5rem;
+}
+
 /* ---- Listing cards (section pages e.g. Tactical Analysis) -------------- */
 
 .quarto-listing .card,
