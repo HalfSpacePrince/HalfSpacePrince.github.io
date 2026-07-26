@@ -114,63 +114,29 @@ a:focus {
   color: var(--rp-green);
 }
 
-/* ---- Buttons (index "about" links render as buttons) ------------------- */
+/* ---- About-block buttons: colour only ---------------------------------
+   Quarto's native .about-link mixin already supplies size (padding, font-size,
+   border-radius) AND a `border: solid 1px` whose colour follows currentColor.
+   So we set ONLY colours here and let native styling handle everything else —
+   the border tracks the text colour automatically. */
 
-.btn-primary,
-.about-links .btn {
-  --bs-btn-bg: var(--rp-green);
-  --bs-btn-border-color: var(--rp-green);
-  --bs-btn-hover-bg: var(--rp-green-dark);
-  --bs-btn-hover-border-color: var(--rp-green-dark);
-  --bs-btn-active-bg: var(--rp-green-dark);
-  --bs-btn-active-border-color: var(--rp-green-dark);
-  font-weight: 500;
-}
-
-/* About-block links (jolla renders <a class="about-link">). Match the exact
-   metrics stock Quarto/cosmo Bootstrap applies to .btn on the reference site:
-   padding 0.375rem 0.75rem · font-size 1rem · font-weight 400 · line-height 1.5
-   · 1px border · border-radius 0.25rem — keeping the site green instead of blue.
-   The two later links behave as .btn-outline-primary. */
 .about-links .about-link {
-  display: inline-block;
-  border: 1px solid var(--rp-green);
-  border-radius: 0.25rem;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--rp-green) !important;   /* override Bootstrap's link-blue in default state */
-  background-color: transparent;
-  text-decoration: none;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  color: var(--rp-green) !important;              /* green text + green border (currentColor) */
+  background-color: transparent !important;
 }
 
 .about-links .about-link:hover,
 .about-links .about-link:focus {
-  background-color: var(--rp-green);
-  border-color: var(--rp-green);
-  color: #fff !important;             /* force readable white text over the green fill */
-  text-decoration: none;
+  color: #fff !important;                         /* white text over green fill */
+  background-color: var(--rp-green) !important;
+  border-color: var(--rp-green) !important;       /* keep border green, not white currentColor */
 }
 
-/* First button ("View CV") is solid — .btn-primary in green */
+/* First link ("View CV") is solid — green fill, white text by default */
 .about-links .about-link:first-child {
-  background-color: var(--rp-green);
-  border-color: var(--rp-green);
   color: #fff !important;
-}
-
-.about-links .about-link:first-child:hover,
-.about-links .about-link:first-child:focus {
-  background-color: var(--rp-green-dark);   /* darken slightly on hover */
-  border-color: var(--rp-green-dark);
-  color: #fff !important;
-}
-
-/* Keep the label span in step with the anchor colour in both states */
-.about-links .about-link .about-link-text {
-  color: inherit !important;
+  background-color: var(--rp-green) !important;
+  border-color: var(--rp-green) !important;
 }
 
 /* The gap under the subtitle is NOT the subtitle margin — it's the empty
