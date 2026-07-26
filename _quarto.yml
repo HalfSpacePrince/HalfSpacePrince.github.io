@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Rayan Osman"
+  title: "Rayan Nasser"
   navbar:
     left:
       - href: index.qmd
@@ -21,7 +21,7 @@ website:
         href: https://github.com/HalfSpacePrince
         aria-label: GitHub
       - icon: linkedin
-        href: https://www.linkedin.com/in/your-linkedin-handle
+        href: https://www.linkedin.com/in/rayan-nasser/
         aria-label: LinkedIn
   search: true
 

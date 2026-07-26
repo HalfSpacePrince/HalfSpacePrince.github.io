@@ -20,11 +20,18 @@ The site is published via **GitHub Pages serving from the `docs/` directory** (`
 - The rendered `docs/` output **is committed to git** — it is the deployed artifact, not a build-time-only folder. After changing content, run `quarto render` and commit the regenerated `docs/` alongside the source.
 - `_site/` and `.quarto/` are gitignored scratch/cache dirs and are NOT the deployment target — do not confuse them with `docs/`.
 
+## Rules
+
+- **Always `quarto render` before committing.** The live site serves from `docs/`; committing source changes without re-rendering leaves `docs/` stale and the deployed site out of sync.
+- **The standard deploy sequence is: `quarto render` → `git add -A` → `git commit` → `git push origin main`.** When asked to deploy/ship/publish, run all four steps without asking for each separately.
+- **Never run `rm` commands.**
+- **Data files never live in this repo.** They live on the Seagate drive at `/Volumes/Seagate/Sharp Focus Advisory/`. Large binaries (PDFs, video decks) are linked out (e.g. Google Drive) rather than committed.
+
 ## Structure & conventions
 
 - `_quarto.yml` — Site config: navbar, theme (`cosmo`), and the site-wide `execute: freeze: auto` setting.
 - Top-level pages: `index.qmd` (landing/about-card via the `about:` front-matter template), `about.qmd`.
-- `tactical-analysis/` — A Quarto **listing page** (`tactical-analysis/index.qmd`) that auto-indexes each subfolder's `index.qmd` by its front-matter `date`/`title`/`description`, newest first. To add a report, create a new subfolder with an `index.qmd` carrying that front matter — it appears in the listing automatically.
-  - Each report subfolder keeps its own `images/`, and large binaries (PDFs, telestrated video decks) are linked out to Google Drive rather than committed.
+- **Sections and posts follow one pattern:** a *section* is a folder whose `index.qmd` is a grid **listing page** (e.g. `tactical-analysis/`, `recruitment/`); a *post* is a subfolder inside a section with its own `index.qmd`. The listing auto-indexes each post's `index.qmd` by its front-matter `date`/`title`/`description`/`image`, newest first — add a post by creating a new subfolder with that front matter and it appears automatically.
+  - Each post subfolder keeps its own `images/`.
 
 Some `index.qmd` links reference assets that may not exist yet (e.g. `cv.pdf`, `football-analytics.qmd`) — these are intentional placeholders, not broken references to fix unless asked.
